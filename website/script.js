@@ -7,7 +7,6 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 });
 
-// Close nav when a link is clicked
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
@@ -15,10 +14,7 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-// Scroll-based fade-in animation
-const fadeEls = document.querySelectorAll('.section-text, .section-mascot, .cta-inner, .hero-content');
-fadeEls.forEach(el => el.classList.add('fade-in'));
-
+// Scroll-based fade-in animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -26,9 +22,28 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.12 });
 
-fadeEls.forEach(el => observer.observe(el));
+document.querySelectorAll('.section-inner:not(.reverse) .section-text').forEach(el => {
+  el.classList.add('fade-in-left');
+  observer.observe(el);
+});
+document.querySelectorAll('.section-inner:not(.reverse) .section-mascot').forEach(el => {
+  el.classList.add('fade-in-right');
+  observer.observe(el);
+});
+document.querySelectorAll('.section-inner.reverse .section-text').forEach(el => {
+  el.classList.add('fade-in-right');
+  observer.observe(el);
+});
+document.querySelectorAll('.section-inner.reverse .section-mascot').forEach(el => {
+  el.classList.add('fade-in-left');
+  observer.observe(el);
+});
+document.querySelectorAll('.cta-inner, .hero-content').forEach(el => {
+  el.classList.add('fade-in');
+  observer.observe(el);
+});
 
 // Highlight active nav link on scroll
 const sections = document.querySelectorAll('section[id], header[id]');
@@ -43,6 +58,6 @@ const sectionObserver = new IntersectionObserver((entries) => {
       });
     }
   });
-}, { threshold: 0.4 });
+}, { threshold: 0.35 });
 
 sections.forEach(s => sectionObserver.observe(s));

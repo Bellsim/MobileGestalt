@@ -11,10 +11,34 @@
   <!-- ===== NAV ===== -->
   <nav class="nav">
     <div class="nav-brand">
-      <div class="nav-logo">
-        <svg class="logo-svg" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="30" cy="30" r="28" stroke="#3ecfcf" stroke-width="2.5"/>
-          <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" fill="#3ecfcf" font-size="18" font-weight="bold" font-family="Arial">TOD</text>
+      <div class="nav-logo-wrap">
+        <svg class="nav-dog" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="38" fill="#0d1f1f" stroke="#3ecfcf" stroke-width="2"/>
+          <!-- Cap board -->
+          <polygon points="40,12 62,22 40,28 18,22" fill="#3ecfcf"/>
+          <rect x="36" y="22" width="8" height="6" fill="#2aabab"/>
+          <!-- Tassel -->
+          <line x1="62" y1="22" x2="66" y2="32" stroke="#ffd700" stroke-width="1.5"/>
+          <circle cx="66" cy="33" r="2" fill="#ffd700"/>
+          <!-- Head -->
+          <ellipse cx="40" cy="46" rx="16" ry="14" fill="#3ecfcf"/>
+          <!-- Ears -->
+          <ellipse cx="26" cy="40" rx="7" ry="11" fill="#2aabab" transform="rotate(-10 26 40)"/>
+          <ellipse cx="54" cy="40" rx="7" ry="11" fill="#2aabab" transform="rotate(10 54 40)"/>
+          <!-- Eyes -->
+          <circle cx="35" cy="44" r="3.5" fill="#fff"/>
+          <circle cx="45" cy="44" r="3.5" fill="#fff"/>
+          <circle cx="36" cy="44.5" r="2" fill="#0d1f1f"/>
+          <circle cx="46" cy="44.5" r="2" fill="#0d1f1f"/>
+          <!-- Nose -->
+          <ellipse cx="40" cy="52" rx="3.5" ry="2.5" fill="#0d1f1f"/>
+          <!-- Mouth -->
+          <path d="M36 55 Q40 59 44 55" stroke="#0d1f1f" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- Body -->
+          <ellipse cx="40" cy="70" rx="14" ry="10" fill="#3ecfcf"/>
+          <!-- Arrow swoop -->
+          <path d="M55 65 Q68 45 58 30" stroke="#3ecfcf" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+          <polygon points="57,27 61,35 53,33" fill="#3ecfcf" opacity="0.5"/>
         </svg>
       </div>
       <span class="nav-title">T.O.D</span>
@@ -43,13 +67,37 @@
         <span>✏️</span>
         <span>💡</span>
         <div class="hero-badge">
-          <div class="badge-logo">
-            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="70" height="70">
-              <circle cx="40" cy="40" r="38" fill="#1a1a1a" stroke="#3ecfcf" stroke-width="3"/>
-              <text x="50%" y="48%" dominant-baseline="middle" text-anchor="middle" fill="#3ecfcf" font-size="20" font-weight="bold" font-family="Arial">TOD</text>
-              <text x="50%" y="68%" dominant-baseline="middle" text-anchor="middle" fill="#ffffff" font-size="6" font-family="Arial">TUTORING ON DEMAND</text>
-            </svg>
-          </div>
+          <svg class="badge-dog" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="48" fill="#0d1f1f" stroke="#3ecfcf" stroke-width="2.5"/>
+            <!-- Cap board -->
+            <polygon points="50,14 76,26 50,34 24,26" fill="#3ecfcf"/>
+            <rect x="45" y="26" width="10" height="8" fill="#2aabab"/>
+            <!-- Tassel -->
+            <line x1="76" y1="26" x2="81" y2="40" stroke="#ffd700" stroke-width="2"/>
+            <circle cx="81" cy="42" r="3" fill="#ffd700"/>
+            <!-- Head -->
+            <ellipse cx="50" cy="57" rx="19" ry="17" fill="#3ecfcf"/>
+            <!-- Ears -->
+            <ellipse cx="33" cy="49" rx="8" ry="13" fill="#2aabab" transform="rotate(-10 33 49)"/>
+            <ellipse cx="67" cy="49" rx="8" ry="13" fill="#2aabab" transform="rotate(10 67 49)"/>
+            <!-- Eyes -->
+            <circle cx="44" cy="54" r="4.5" fill="#fff"/>
+            <circle cx="56" cy="54" r="4.5" fill="#fff"/>
+            <circle cx="45" cy="55" r="2.5" fill="#0d1f1f"/>
+            <circle cx="57" cy="55" r="2.5" fill="#0d1f1f"/>
+            <!-- Shine -->
+            <circle cx="46" cy="54" r="1" fill="#fff" opacity="0.7"/>
+            <circle cx="58" cy="54" r="1" fill="#fff" opacity="0.7"/>
+            <!-- Nose -->
+            <ellipse cx="50" cy="65" rx="4" ry="3" fill="#0d1f1f"/>
+            <!-- Mouth -->
+            <path d="M45 69 Q50 74 55 69" stroke="#0d1f1f" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Body -->
+            <ellipse cx="50" cy="87" rx="17" ry="13" fill="#3ecfcf"/>
+            <!-- Arrow swoop -->
+            <path d="M68 80 Q84 56 72 36" stroke="#3ecfcf" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+            <polygon points="71,33 76,43 66,41" fill="#3ecfcf" opacity="0.6"/>
+          </svg>
           <div class="badge-text">
             <span class="badge-name">TOD</span>
             <span class="badge-sub">TUTORING ON DEMAND</span>
@@ -78,11 +126,26 @@
       </div>
       <div class="section-mascot">
         <div class="mascot-circle">
-          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" width="120" height="120">
-            <circle cx="60" cy="60" r="56" fill="#111" stroke="#3ecfcf" stroke-width="3"/>
-            <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#3ecfcf" font-size="28" font-weight="bold" font-family="Arial">TOD</text>
-            <text x="50%" y="62%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="8" font-family="Arial">TUTORING ON DEMAND</text>
-            <text x="50%" y="74%" dominant-baseline="middle" text-anchor="middle" fill="#3ecfcf" font-size="6.5" font-family="Arial">LIVE, PERSONALIZED, ANYTIME</text>
+          <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+            <circle cx="80" cy="80" r="76" fill="#0d1f1f" stroke="#3ecfcf" stroke-width="3"/>
+            <polygon points="80,22 112,38 80,48 48,38" fill="#3ecfcf"/>
+            <rect x="74" y="38" width="12" height="10" fill="#2aabab"/>
+            <line x1="112" y1="38" x2="118" y2="56" stroke="#ffd700" stroke-width="2"/>
+            <circle cx="118" cy="59" r="4" fill="#ffd700"/>
+            <ellipse cx="80" cy="94" rx="24" ry="22" fill="#3ecfcf"/>
+            <ellipse cx="54" cy="82" rx="10" ry="16" fill="#2aabab" transform="rotate(-10 54 82)"/>
+            <ellipse cx="106" cy="82" rx="10" ry="16" fill="#2aabab" transform="rotate(10 106 82)"/>
+            <circle cx="72" cy="89" r="6" fill="#fff"/>
+            <circle cx="88" cy="89" r="6" fill="#fff"/>
+            <circle cx="73" cy="90" r="3.5" fill="#0d1f1f"/>
+            <circle cx="89" cy="90" r="3.5" fill="#0d1f1f"/>
+            <circle cx="74" cy="89" r="1.2" fill="#fff" opacity="0.7"/>
+            <circle cx="90" cy="89" r="1.2" fill="#fff" opacity="0.7"/>
+            <ellipse cx="80" cy="101" rx="5" ry="4" fill="#0d1f1f"/>
+            <path d="M74 107 Q80 113 86 107" stroke="#0d1f1f" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <ellipse cx="80" cy="130" rx="22" ry="16" fill="#3ecfcf"/>
+            <path d="M108 124 Q128 96 114 66" stroke="#3ecfcf" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.55"/>
+            <polygon points="113,62 120,74 108,72" fill="#3ecfcf" opacity="0.55"/>
           </svg>
         </div>
       </div>
@@ -94,11 +157,26 @@
     <div class="section-inner reverse">
       <div class="section-mascot">
         <div class="mascot-circle">
-          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" width="120" height="120">
-            <circle cx="60" cy="60" r="56" fill="#111" stroke="#3ecfcf" stroke-width="3"/>
-            <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#3ecfcf" font-size="28" font-weight="bold" font-family="Arial">TOD</text>
-            <text x="50%" y="62%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="8" font-family="Arial">TUTORING ON DEMAND</text>
-            <text x="50%" y="74%" dominant-baseline="middle" text-anchor="middle" fill="#3ecfcf" font-size="6.5" font-family="Arial">LIVE, PERSONALIZED, ANYTIME</text>
+          <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+            <circle cx="80" cy="80" r="76" fill="#0d1f1f" stroke="#3ecfcf" stroke-width="3"/>
+            <polygon points="80,22 112,38 80,48 48,38" fill="#3ecfcf"/>
+            <rect x="74" y="38" width="12" height="10" fill="#2aabab"/>
+            <line x1="112" y1="38" x2="118" y2="56" stroke="#ffd700" stroke-width="2"/>
+            <circle cx="118" cy="59" r="4" fill="#ffd700"/>
+            <ellipse cx="80" cy="94" rx="24" ry="22" fill="#3ecfcf"/>
+            <ellipse cx="54" cy="82" rx="10" ry="16" fill="#2aabab" transform="rotate(-10 54 82)"/>
+            <ellipse cx="106" cy="82" rx="10" ry="16" fill="#2aabab" transform="rotate(10 106 82)"/>
+            <circle cx="72" cy="89" r="6" fill="#fff"/>
+            <circle cx="88" cy="89" r="6" fill="#fff"/>
+            <circle cx="73" cy="90" r="3.5" fill="#0d1f1f"/>
+            <circle cx="89" cy="90" r="3.5" fill="#0d1f1f"/>
+            <circle cx="74" cy="89" r="1.2" fill="#fff" opacity="0.7"/>
+            <circle cx="90" cy="89" r="1.2" fill="#fff" opacity="0.7"/>
+            <ellipse cx="80" cy="101" rx="5" ry="4" fill="#0d1f1f"/>
+            <path d="M74 107 Q80 113 86 107" stroke="#0d1f1f" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <ellipse cx="80" cy="130" rx="22" ry="16" fill="#3ecfcf"/>
+            <path d="M108 124 Q128 96 114 66" stroke="#3ecfcf" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.55"/>
+            <polygon points="113,62 120,74 108,72" fill="#3ecfcf" opacity="0.55"/>
           </svg>
         </div>
       </div>
@@ -128,11 +206,26 @@
       </div>
       <div class="section-mascot">
         <div class="mascot-circle">
-          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" width="120" height="120">
-            <circle cx="60" cy="60" r="56" fill="#111" stroke="#3ecfcf" stroke-width="3"/>
-            <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#3ecfcf" font-size="28" font-weight="bold" font-family="Arial">TOD</text>
-            <text x="50%" y="62%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="8" font-family="Arial">TUTORING ON DEMAND</text>
-            <text x="50%" y="74%" dominant-baseline="middle" text-anchor="middle" fill="#3ecfcf" font-size="6.5" font-family="Arial">LIVE, PERSONALIZED, ANYTIME</text>
+          <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+            <circle cx="80" cy="80" r="76" fill="#0d1f1f" stroke="#3ecfcf" stroke-width="3"/>
+            <polygon points="80,22 112,38 80,48 48,38" fill="#3ecfcf"/>
+            <rect x="74" y="38" width="12" height="10" fill="#2aabab"/>
+            <line x1="112" y1="38" x2="118" y2="56" stroke="#ffd700" stroke-width="2"/>
+            <circle cx="118" cy="59" r="4" fill="#ffd700"/>
+            <ellipse cx="80" cy="94" rx="24" ry="22" fill="#3ecfcf"/>
+            <ellipse cx="54" cy="82" rx="10" ry="16" fill="#2aabab" transform="rotate(-10 54 82)"/>
+            <ellipse cx="106" cy="82" rx="10" ry="16" fill="#2aabab" transform="rotate(10 106 82)"/>
+            <circle cx="72" cy="89" r="6" fill="#fff"/>
+            <circle cx="88" cy="89" r="6" fill="#fff"/>
+            <circle cx="73" cy="90" r="3.5" fill="#0d1f1f"/>
+            <circle cx="89" cy="90" r="3.5" fill="#0d1f1f"/>
+            <circle cx="74" cy="89" r="1.2" fill="#fff" opacity="0.7"/>
+            <circle cx="90" cy="89" r="1.2" fill="#fff" opacity="0.7"/>
+            <ellipse cx="80" cy="101" rx="5" ry="4" fill="#0d1f1f"/>
+            <path d="M74 107 Q80 113 86 107" stroke="#0d1f1f" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <ellipse cx="80" cy="130" rx="22" ry="16" fill="#3ecfcf"/>
+            <path d="M108 124 Q128 96 114 66" stroke="#3ecfcf" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.55"/>
+            <polygon points="113,62 120,74 108,72" fill="#3ecfcf" opacity="0.55"/>
           </svg>
         </div>
       </div>
