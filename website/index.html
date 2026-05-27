@@ -4,279 +4,421 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>T.O.D – Tutoring On Demand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ===== NAV ===== -->
-  <nav class="nav">
-    <div class="nav-brand">
-      <div class="nav-logo-wrap">
-        <svg class="nav-dog" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="40" cy="40" r="38" fill="#0d1f1f" stroke="#3ecfcf" stroke-width="2"/>
-          <!-- Cap board -->
-          <polygon points="40,12 62,22 40,28 18,22" fill="#3ecfcf"/>
-          <rect x="36" y="22" width="8" height="6" fill="#2aabab"/>
-          <!-- Tassel -->
-          <line x1="62" y1="22" x2="66" y2="32" stroke="#ffd700" stroke-width="1.5"/>
-          <circle cx="66" cy="33" r="2" fill="#ffd700"/>
-          <!-- Head -->
-          <ellipse cx="40" cy="46" rx="16" ry="14" fill="#3ecfcf"/>
-          <!-- Ears -->
-          <ellipse cx="26" cy="40" rx="7" ry="11" fill="#2aabab" transform="rotate(-10 26 40)"/>
-          <ellipse cx="54" cy="40" rx="7" ry="11" fill="#2aabab" transform="rotate(10 54 40)"/>
-          <!-- Eyes -->
-          <circle cx="35" cy="44" r="3.5" fill="#fff"/>
-          <circle cx="45" cy="44" r="3.5" fill="#fff"/>
-          <circle cx="36" cy="44.5" r="2" fill="#0d1f1f"/>
-          <circle cx="46" cy="44.5" r="2" fill="#0d1f1f"/>
-          <!-- Nose -->
-          <ellipse cx="40" cy="52" rx="3.5" ry="2.5" fill="#0d1f1f"/>
-          <!-- Mouth -->
-          <path d="M36 55 Q40 59 44 55" stroke="#0d1f1f" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <!-- Body -->
-          <ellipse cx="40" cy="70" rx="14" ry="10" fill="#3ecfcf"/>
-          <!-- Arrow swoop -->
-          <path d="M55 65 Q68 45 58 30" stroke="#3ecfcf" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
-          <polygon points="57,27 61,35 53,33" fill="#3ecfcf" opacity="0.5"/>
-        </svg>
-      </div>
-      <span class="nav-title">T.O.D</span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#idea">The Idea</a></li>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="logo">
+      <svg class="logo-svg" viewBox="0 0 44 44" fill="none">
+        <circle cx="22" cy="22" r="21" fill="#00e5c8" stroke="#00e5c8" stroke-width="1.5"/>
+        <polygon points="22,7 34,13 22,17 10,13" fill="#001a18"/>
+        <rect x="19" y="13" width="6" height="4" fill="#001a18"/>
+        <line x1="34" y1="13" x2="37" y2="20" stroke="#ffe066" stroke-width="1.5"/>
+        <circle cx="37" cy="21" r="1.5" fill="#ffe066"/>
+        <ellipse cx="22" cy="27" rx="9" ry="8" fill="#001a18"/>
+        <ellipse cx="14" cy="23" rx="4" ry="6" fill="#001a18" transform="rotate(-8 14 23)"/>
+        <ellipse cx="30" cy="23" rx="4" ry="6" fill="#001a18" transform="rotate(8 30 23)"/>
+        <circle cx="19" cy="26" r="2" fill="#fff"/>
+        <circle cx="25" cy="26" r="2" fill="#fff"/>
+        <circle cx="19.5" cy="26.5" r="1.1" fill="#001a18"/>
+        <circle cx="25.5" cy="26.5" r="1.1" fill="#001a18"/>
+        <ellipse cx="22" cy="30" rx="2" ry="1.5" fill="#fff" opacity="0.3"/>
+        <path d="M19 33 Q22 36 25 33" stroke="#fff" stroke-width="1.2" fill="none" opacity="0.5"/>
+      </svg>
+      <span>T.O.D</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#idea">Idea</a></li>
+      <li><a href="#how">How It Works</a></li>
       <li><a href="#tutors">Tutors</a></li>
       <li><a href="#kids">Kids</a></li>
-      <li><a href="#international">International</a></li>
-      <li><a href="#get-started" class="btn-nav">Get Started</a></li>
+      <li><a href="#international">Global</a></li>
+      <li><a href="#signup" class="nav-cta">Join Free</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <rect x="1" y="5" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect x="1" y="10" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect x="1" y="15" width="20" height="2" rx="1" fill="currentColor"/>
+      </svg>
     </button>
   </nav>
 
-  <!-- ===== HERO ===== -->
-  <header class="hero" id="home">
-    <div class="hero-content">
-      <div class="hero-top">
-        <h1 class="hero-title">T.O.D</h1>
-        <span class="brain-icon">🧠</span>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <div class="hero-kicker">Live · Personalized · Anytime</div>
+      <h1 class="hero-h1">
+        <span class="h1-line1">Tutoring</span>
+        <span class="h1-line2">On <em>Demand</em></span>
+      </h1>
+      <p class="hero-sub">
+        Connect with verified tutors in seconds. Search any skill, book a session, and start growing — wherever you are in the world.
+      </p>
+
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 20 20" fill="none">
+          <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="2"/>
+          <path d="M13 13L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input type="text" id="heroSearch" placeholder="Search a topic: Python, Math, Guitar…" autocomplete="off" />
+        <button class="search-go" onclick="goSearch()">Go</button>
+        <ul class="autocomplete" id="autocomplete"></ul>
       </div>
-      <div class="hero-icons">
-        <span>🧠</span>
-        <span>✏️</span>
-        <span>💡</span>
-        <div class="hero-badge">
-          <svg class="badge-dog" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="48" fill="#0d1f1f" stroke="#3ecfcf" stroke-width="2.5"/>
-            <!-- Cap board -->
-            <polygon points="50,14 76,26 50,34 24,26" fill="#3ecfcf"/>
-            <rect x="45" y="26" width="10" height="8" fill="#2aabab"/>
-            <!-- Tassel -->
-            <line x1="76" y1="26" x2="81" y2="40" stroke="#ffd700" stroke-width="2"/>
-            <circle cx="81" cy="42" r="3" fill="#ffd700"/>
-            <!-- Head -->
-            <ellipse cx="50" cy="57" rx="19" ry="17" fill="#3ecfcf"/>
-            <!-- Ears -->
-            <ellipse cx="33" cy="49" rx="8" ry="13" fill="#2aabab" transform="rotate(-10 33 49)"/>
-            <ellipse cx="67" cy="49" rx="8" ry="13" fill="#2aabab" transform="rotate(10 67 49)"/>
-            <!-- Eyes -->
-            <circle cx="44" cy="54" r="4.5" fill="#fff"/>
-            <circle cx="56" cy="54" r="4.5" fill="#fff"/>
-            <circle cx="45" cy="55" r="2.5" fill="#0d1f1f"/>
-            <circle cx="57" cy="55" r="2.5" fill="#0d1f1f"/>
-            <!-- Shine -->
-            <circle cx="46" cy="54" r="1" fill="#fff" opacity="0.7"/>
-            <circle cx="58" cy="54" r="1" fill="#fff" opacity="0.7"/>
-            <!-- Nose -->
-            <ellipse cx="50" cy="65" rx="4" ry="3" fill="#0d1f1f"/>
-            <!-- Mouth -->
-            <path d="M45 69 Q50 74 55 69" stroke="#0d1f1f" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <!-- Body -->
-            <ellipse cx="50" cy="87" rx="17" ry="13" fill="#3ecfcf"/>
-            <!-- Arrow swoop -->
-            <path d="M68 80 Q84 56 72 36" stroke="#3ecfcf" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.6"/>
-            <polygon points="71,33 76,43 66,41" fill="#3ecfcf" opacity="0.6"/>
+
+      <div class="chips">
+        <button class="chip" onclick="fillSearch('Python')">Python</button>
+        <button class="chip" onclick="fillSearch('Mathematics')">Math</button>
+        <button class="chip" onclick="fillSearch('Spanish')">Spanish</button>
+        <button class="chip" onclick="fillSearch('Physics')">Physics</button>
+        <button class="chip" onclick="fillSearch('Chess')">Chess</button>
+        <button class="chip" onclick="fillSearch('Music')">Music</button>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-n">12K+</span><span class="stat-l">Verified Tutors</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-n">80+</span><span class="stat-l">Countries</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-n">4.9★</span><span class="stat-l">Avg Rating</span></div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-card-stack">
+        <!-- Main tutor card -->
+        <div class="tutor-card main-card">
+          <div class="tutor-avatar">
+            <svg viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="40" r="40" fill="#0d2e2c"/>
+              <ellipse cx="40" cy="46" rx="15" ry="14" fill="#00e5c8"/>
+              <ellipse cx="28" cy="38" rx="7" ry="11" fill="#00c4ab" transform="rotate(-10 28 38)"/>
+              <ellipse cx="52" cy="38" rx="7" ry="11" fill="#00c4ab" transform="rotate(10 52 38)"/>
+              <circle cx="35" cy="43" r="4" fill="#fff"/>
+              <circle cx="45" cy="43" r="4" fill="#fff"/>
+              <circle cx="36" cy="43.5" r="2.2" fill="#001a18"/>
+              <circle cx="46" cy="43.5" r="2.2" fill="#001a18"/>
+              <ellipse cx="40" cy="51" rx="3" ry="2" fill="#001a18"/>
+              <path d="M36 55 Q40 59 44 55" stroke="#001a18" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <polygon points="40,14 56,21 40,26 24,21" fill="#00e5c8"/>
+              <line x1="56" y1="21" x2="60" y2="29" stroke="#ffe066" stroke-width="1.5"/>
+              <circle cx="60" cy="30" r="2" fill="#ffe066"/>
+            </svg>
+          </div>
+          <div class="tutor-info">
+            <div class="tutor-name">Alex M.</div>
+            <div class="tutor-subject">Python &amp; Data Science</div>
+            <div class="tutor-stars">★★★★★ <span>4.97</span></div>
+          </div>
+          <div class="tutor-badge">VERIFIED</div>
+        </div>
+        <!-- Floating tag: live now -->
+        <div class="float-tag live-tag">🟢 Live Now</div>
+        <!-- Floating session card -->
+        <div class="session-card">
+          <div class="session-icon">💬</div>
+          <div>
+            <div class="session-title">Session Started</div>
+            <div class="session-sub">Math · 14 min ago</div>
+          </div>
+        </div>
+        <!-- Globe card -->
+        <div class="globe-card">
+          <svg viewBox="0 0 60 60" fill="none" width="60" height="60">
+            <circle cx="30" cy="30" r="28" fill="none" stroke="#00e5c8" stroke-width="1.5"/>
+            <ellipse cx="30" cy="30" rx="28" ry="11" fill="none" stroke="#00e5c8" stroke-width="1" opacity="0.4"/>
+            <ellipse cx="30" cy="30" rx="28" ry="20" fill="none" stroke="#00e5c8" stroke-width="1" opacity="0.25"/>
+            <line x1="30" y1="2" x2="30" y2="58" stroke="#00e5c8" stroke-width="1" opacity="0.4"/>
+            <ellipse cx="22" cy="25" rx="6" ry="4" fill="#00e5c8" opacity="0.6" transform="rotate(-15 22 25)"/>
+            <ellipse cx="38" cy="28" rx="5" ry="4" fill="#00e5c8" opacity="0.5" transform="rotate(10 38 28)"/>
+            <circle cx="22" cy="22" r="2.5" fill="#ffe066"/>
+            <circle cx="38" cy="25" r="2.5" fill="#ffe066"/>
+            <path d="M22 22 Q30 12 38 25" stroke="#ffe066" stroke-width="1.2" fill="none" stroke-dasharray="3 2"/>
           </svg>
-          <div class="badge-text">
-            <span class="badge-name">TOD</span>
-            <span class="badge-sub">TUTORING ON DEMAND</span>
-            <span class="badge-tag">LIVE, PERSONALIZED, ANYTIME</span>
+          <span>80+ countries</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE IDEA -->
+  <section class="bento-section" id="idea">
+    <div class="bento-header">
+      <h2 class="bento-title">The <span>Idea</span></h2>
+      <p class="bento-sub">One platform — every skill, every level, every time zone.</p>
+    </div>
+    <div class="bento-grid">
+      <div class="bento-card bento-wide">
+        <div class="bento-icon">🔍</div>
+        <h3>Find Your Tutor</h3>
+        <p>Search any skill — Python, calculus, Spanish, guitar — and instantly browse verified pros ready to help.</p>
+      </div>
+      <div class="bento-card bento-tall">
+        <div class="bento-icon">💬</div>
+        <h3>Live Chat Sessions</h3>
+        <p>Connect through real-time chat, share files, solve problems together.</p>
+      </div>
+      <div class="bento-card">
+        <div class="bento-icon">✅</div>
+        <h3>Verified Tutors</h3>
+        <p>Every tutor is background-checked and review-rated.</p>
+      </div>
+      <div class="bento-card bento-teal">
+        <div class="bento-num">12,000+</div>
+        <p>tutors across 200 subjects</p>
+      </div>
+      <div class="bento-card">
+        <div class="bento-icon">⭐</div>
+        <h3>Ratings & Reviews</h3>
+        <p>Real feedback from real students — pick with confidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section" id="how">
+    <div class="how-inner">
+      <h2 class="section-h2">How It Works</h2>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="step-circle">01</div>
+          <div class="step-line"></div>
+          <h3>Search</h3>
+          <p>Type a subject or skill. Filter by price, rating, or language.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-circle">02</div>
+          <div class="step-line"></div>
+          <h3>Book</h3>
+          <p>Pick a tutor, choose an open time slot, confirm in one tap.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-circle">03</div>
+          <div class="step-line last-line"></div>
+          <h3>Learn</h3>
+          <p>Start your live session and build skills that matter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TUTORS -->
+  <section class="tutor-section" id="tutors">
+    <div class="tutor-inner">
+      <div class="tutor-text">
+        <div class="section-kicker">For Educators</div>
+        <h2 class="section-h2">Become a <span class="accent">Tutor</span></h2>
+        <p>
+          Ready to teach? Go to <strong>Settings › Tutor</strong> and apply. Once verified, you control everything — your subjects, your schedule, and your rate. Open calendar slots get booked by students and parents directly.
+        </p>
+        <ul class="tutor-perks">
+          <li><span class="perk-dot"></span>Set your own hourly rate</li>
+          <li><span class="perk-dot"></span>Choose any subject you know</li>
+          <li><span class="perk-dot"></span>Flexible calendar availability</li>
+          <li><span class="perk-dot"></span>Instant payouts after sessions</li>
+        </ul>
+        <a href="#signup" class="btn-solid">Start Teaching Today</a>
+      </div>
+      <div class="tutor-visual">
+        <div class="tutor-dash">
+          <div class="dash-header">
+            <span class="dash-title">My Dashboard</span>
+            <span class="dash-badge">Active</span>
+          </div>
+          <div class="dash-row">
+            <span>📚</span>
+            <div>
+              <div class="dash-row-title">Python Fundamentals</div>
+              <div class="dash-row-sub">Today · 3:00 PM</div>
+            </div>
+            <span class="dash-row-status booked">Booked</span>
+          </div>
+          <div class="dash-row">
+            <span>📐</span>
+            <div>
+              <div class="dash-row-title">Calculus II</div>
+              <div class="dash-row-sub">Tomorrow · 11:00 AM</div>
+            </div>
+            <span class="dash-row-status open">Open</span>
+          </div>
+          <div class="dash-row">
+            <span>🎸</span>
+            <div>
+              <div class="dash-row-title">Guitar Basics</div>
+              <div class="dash-row-sub">Fri · 5:00 PM</div>
+            </div>
+            <span class="dash-row-status booked">Booked</span>
+          </div>
+          <div class="dash-earn">
+            <span class="dash-earn-label">This Week</span>
+            <span class="dash-earn-val">$342.00</span>
           </div>
         </div>
       </div>
-      <p class="hero-tagline">The next revelation of tutoring</p>
-      <a href="#idea" class="btn-primary">Discover More</a>
     </div>
-    <div class="hero-glow"></div>
-  </header>
+  </section>
 
-  <!-- ===== THE IDEA ===== -->
-  <section class="section section-dark" id="idea">
-    <div class="section-inner">
-      <div class="section-text">
-        <h2 class="section-heading">The Idea</h2>
-        <p>
-          Want to learn something new or share what you know? T.O.D is the place for you.
-          We match you with verified tutors through an easy-to-use online chat. Just search
-          for any skill like Python programming, math, etc. and instantly connect with a pro
-          who can help you build a better future.
-        </p>
-        <a href="#get-started" class="btn-primary">Start Learning</a>
+  <!-- KIDS -->
+  <section class="kids-section" id="kids">
+    <div class="kids-inner">
+      <div class="kids-visual">
+        <div class="kids-subjects">
+          <div class="subj-card" style="--c:#00e5c8">🔢<span>Math</span></div>
+          <div class="subj-card" style="--c:#a78bfa">📖<span>Reading</span></div>
+          <div class="subj-card" style="--c:#fb923c">🔬<span>Science</span></div>
+          <div class="subj-card" style="--c:#f472b6">🎨<span>Art</span></div>
+          <div class="subj-card" style="--c:#34d399">🌍<span>History</span></div>
+          <div class="subj-card" style="--c:#60a5fa">💻<span>Coding</span></div>
+        </div>
       </div>
-      <div class="section-mascot">
-        <div class="mascot-circle">
-          <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
-            <circle cx="80" cy="80" r="76" fill="#0d1f1f" stroke="#3ecfcf" stroke-width="3"/>
-            <polygon points="80,22 112,38 80,48 48,38" fill="#3ecfcf"/>
-            <rect x="74" y="38" width="12" height="10" fill="#2aabab"/>
-            <line x1="112" y1="38" x2="118" y2="56" stroke="#ffd700" stroke-width="2"/>
-            <circle cx="118" cy="59" r="4" fill="#ffd700"/>
-            <ellipse cx="80" cy="94" rx="24" ry="22" fill="#3ecfcf"/>
-            <ellipse cx="54" cy="82" rx="10" ry="16" fill="#2aabab" transform="rotate(-10 54 82)"/>
-            <ellipse cx="106" cy="82" rx="10" ry="16" fill="#2aabab" transform="rotate(10 106 82)"/>
-            <circle cx="72" cy="89" r="6" fill="#fff"/>
-            <circle cx="88" cy="89" r="6" fill="#fff"/>
-            <circle cx="73" cy="90" r="3.5" fill="#0d1f1f"/>
-            <circle cx="89" cy="90" r="3.5" fill="#0d1f1f"/>
-            <circle cx="74" cy="89" r="1.2" fill="#fff" opacity="0.7"/>
-            <circle cx="90" cy="89" r="1.2" fill="#fff" opacity="0.7"/>
-            <ellipse cx="80" cy="101" rx="5" ry="4" fill="#0d1f1f"/>
-            <path d="M74 107 Q80 113 86 107" stroke="#0d1f1f" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <ellipse cx="80" cy="130" rx="22" ry="16" fill="#3ecfcf"/>
-            <path d="M108 124 Q128 96 114 66" stroke="#3ecfcf" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.55"/>
-            <polygon points="113,62 120,74 108,72" fill="#3ecfcf" opacity="0.55"/>
+      <div class="kids-text">
+        <div class="section-kicker">For Parents</div>
+        <h2 class="section-h2">Kids <span class="accent">Section</span></h2>
+        <p>
+          If your kids need extra help or want to explore something new, the kids section has you covered. Browse topics made for younger learners, pick a friendly verified tutor, and book a session in minutes.
+        </p>
+        <div class="kids-steps">
+          <div class="kstep"><span class="kstep-n">1</span><span>Find a topic</span></div>
+          <div class="kstep-arrow">→</div>
+          <div class="kstep"><span class="kstep-n">2</span><span>Book a tutor</span></div>
+          <div class="kstep-arrow">→</div>
+          <div class="kstep"><span class="kstep-n">3</span><span>Start learning</span></div>
+        </div>
+        <a href="#signup" class="btn-solid">Explore Kids Section</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERNATIONAL -->
+  <section class="global-section" id="international">
+    <div class="global-inner">
+      <div class="global-text">
+        <div class="section-kicker">Worldwide</div>
+        <h2 class="section-h2">International <span class="accent">Access</span></h2>
+        <p>
+          Students can find tutors based anywhere in the world. Language is no barrier — our platform provides automatic real-time translation so tutors and students can communicate clearly and effectively, no matter where they are.
+        </p>
+        <div class="global-features">
+          <div class="gfeat"><span class="gfeat-icon">🌐</span><div><strong>Global Tutors</strong><span>Find experts across 80+ countries</span></div></div>
+          <div class="gfeat"><span class="gfeat-icon">🔤</span><div><strong>Auto-Translation</strong><span>Seamless multilingual sessions</span></div></div>
+          <div class="gfeat"><span class="gfeat-icon">🕐</span><div><strong>Any Time Zone</strong><span>24/7 availability worldwide</span></div></div>
+        </div>
+        <a href="#signup" class="btn-solid">Find Global Tutors</a>
+      </div>
+      <div class="global-visual">
+        <div class="globe-container">
+          <svg class="globe-svg" viewBox="0 0 280 280" fill="none">
+            <!-- Outer ring glow -->
+            <circle cx="140" cy="140" r="130" fill="none" stroke="#00e5c8" stroke-width="1" opacity="0.15"/>
+            <!-- Globe body -->
+            <circle cx="140" cy="140" r="110" fill="#071c1b" stroke="#00e5c8" stroke-width="2"/>
+            <!-- Latitude rings -->
+            <ellipse cx="140" cy="140" rx="110" ry="42" fill="none" stroke="#00e5c8" stroke-width="1" opacity="0.3"/>
+            <ellipse cx="140" cy="140" rx="110" ry="78" fill="none" stroke="#00e5c8" stroke-width="1" opacity="0.2"/>
+            <ellipse cx="140" cy="140" rx="110" ry="100" fill="none" stroke="#00e5c8" stroke-width="1" opacity="0.15"/>
+            <!-- Vertical lines -->
+            <line x1="140" y1="30" x2="140" y2="250" stroke="#00e5c8" stroke-width="1" opacity="0.3"/>
+            <ellipse cx="140" cy="140" rx="55" ry="110" fill="none" stroke="#00e5c8" stroke-width="1" opacity="0.2"/>
+            <!-- Continents -->
+            <ellipse cx="112" cy="118" rx="22" ry="14" fill="#00e5c8" opacity="0.5" transform="rotate(-20 112 118)"/>
+            <ellipse cx="115" cy="152" rx="14" ry="20" fill="#00e5c8" opacity="0.4" transform="rotate(5 115 152)"/>
+            <ellipse cx="168" cy="124" rx="20" ry="14" fill="#00e5c8" opacity="0.45" transform="rotate(15 168 124)"/>
+            <ellipse cx="172" cy="152" rx="12" ry="16" fill="#00e5c8" opacity="0.35" transform="rotate(-5 172 152)"/>
+            <ellipse cx="100" cy="136" rx="8" ry="5" fill="#00e5c8" opacity="0.3" transform="rotate(20 100 136)"/>
+            <!-- Pin 1 -->
+            <circle cx="112" cy="112" r="6" fill="#ffe066"/>
+            <path d="M112 112 L112 126" stroke="#ffe066" stroke-width="2"/>
+            <circle cx="112" cy="126" r="2" fill="#ffe066" opacity="0.5"/>
+            <!-- Pin 2 -->
+            <circle cx="170" cy="120" r="6" fill="#ffe066"/>
+            <path d="M170 120 L170 134" stroke="#ffe066" stroke-width="2"/>
+            <circle cx="170" cy="134" r="2" fill="#ffe066" opacity="0.5"/>
+            <!-- Connection arc -->
+            <path d="M112 112 Q140 80 170 120" stroke="#ffe066" stroke-width="1.5" fill="none" stroke-dasharray="5 3" opacity="0.9"/>
+            <!-- Midpoint dot -->
+            <circle cx="140" cy="90" r="3" fill="#ffe066" opacity="0.7"/>
           </svg>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== TUTORS ===== -->
-  <section class="section section-accent" id="tutors">
-    <div class="section-inner reverse">
-      <div class="section-mascot">
-        <div class="mascot-circle">
-          <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
-            <circle cx="80" cy="80" r="76" fill="#0d1f1f" stroke="#3ecfcf" stroke-width="3"/>
-            <polygon points="80,22 112,38 80,48 48,38" fill="#3ecfcf"/>
-            <rect x="74" y="38" width="12" height="10" fill="#2aabab"/>
-            <line x1="112" y1="38" x2="118" y2="56" stroke="#ffd700" stroke-width="2"/>
-            <circle cx="118" cy="59" r="4" fill="#ffd700"/>
-            <ellipse cx="80" cy="94" rx="24" ry="22" fill="#3ecfcf"/>
-            <ellipse cx="54" cy="82" rx="10" ry="16" fill="#2aabab" transform="rotate(-10 54 82)"/>
-            <ellipse cx="106" cy="82" rx="10" ry="16" fill="#2aabab" transform="rotate(10 106 82)"/>
-            <circle cx="72" cy="89" r="6" fill="#fff"/>
-            <circle cx="88" cy="89" r="6" fill="#fff"/>
-            <circle cx="73" cy="90" r="3.5" fill="#0d1f1f"/>
-            <circle cx="89" cy="90" r="3.5" fill="#0d1f1f"/>
-            <circle cx="74" cy="89" r="1.2" fill="#fff" opacity="0.7"/>
-            <circle cx="90" cy="89" r="1.2" fill="#fff" opacity="0.7"/>
-            <ellipse cx="80" cy="101" rx="5" ry="4" fill="#0d1f1f"/>
-            <path d="M74 107 Q80 113 86 107" stroke="#0d1f1f" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <ellipse cx="80" cy="130" rx="22" ry="16" fill="#3ecfcf"/>
-            <path d="M108 124 Q128 96 114 66" stroke="#3ecfcf" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.55"/>
-            <polygon points="113,62 120,74 108,72" fill="#3ecfcf" opacity="0.55"/>
-          </svg>
-        </div>
-      </div>
-      <div class="section-text">
-        <h2 class="section-heading">Tutors</h2>
-        <p>
-          Ready to teach? Head to <strong>Settings &gt; Tutor</strong> to apply. After we verify your
-          profile, you can start tutoring any subject you like. You're in charge of your own schedule
-          and your own fee, no matter the topic. You can customize your calendar based on your
-          availability to open spots that can be booked by parents and students on the T.O.D. website.
-        </p>
-        <a href="#get-started" class="btn-primary">Become a Tutor</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== KIDS ===== -->
-  <section class="section section-dark" id="kids">
-    <div class="section-inner">
-      <div class="section-text">
-        <h2 class="section-heading">Kids</h2>
-        <p>
-          Parents, if your kids need extra help or want to learn more, explore the kids section.
-          Find a topic, book a tutor, and start learning.
-        </p>
-        <a href="#get-started" class="btn-primary">Explore Kids Section</a>
-      </div>
-      <div class="section-mascot">
-        <div class="mascot-circle">
-          <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
-            <circle cx="80" cy="80" r="76" fill="#0d1f1f" stroke="#3ecfcf" stroke-width="3"/>
-            <polygon points="80,22 112,38 80,48 48,38" fill="#3ecfcf"/>
-            <rect x="74" y="38" width="12" height="10" fill="#2aabab"/>
-            <line x1="112" y1="38" x2="118" y2="56" stroke="#ffd700" stroke-width="2"/>
-            <circle cx="118" cy="59" r="4" fill="#ffd700"/>
-            <ellipse cx="80" cy="94" rx="24" ry="22" fill="#3ecfcf"/>
-            <ellipse cx="54" cy="82" rx="10" ry="16" fill="#2aabab" transform="rotate(-10 54 82)"/>
-            <ellipse cx="106" cy="82" rx="10" ry="16" fill="#2aabab" transform="rotate(10 106 82)"/>
-            <circle cx="72" cy="89" r="6" fill="#fff"/>
-            <circle cx="88" cy="89" r="6" fill="#fff"/>
-            <circle cx="73" cy="90" r="3.5" fill="#0d1f1f"/>
-            <circle cx="89" cy="90" r="3.5" fill="#0d1f1f"/>
-            <circle cx="74" cy="89" r="1.2" fill="#fff" opacity="0.7"/>
-            <circle cx="90" cy="89" r="1.2" fill="#fff" opacity="0.7"/>
-            <ellipse cx="80" cy="101" rx="5" ry="4" fill="#0d1f1f"/>
-            <path d="M74 107 Q80 113 86 107" stroke="#0d1f1f" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <ellipse cx="80" cy="130" rx="22" ry="16" fill="#3ecfcf"/>
-            <path d="M108 124 Q128 96 114 66" stroke="#3ecfcf" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.55"/>
-            <polygon points="113,62 120,74 108,72" fill="#3ecfcf" opacity="0.55"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== INTERNATIONAL ACCESS ===== -->
-  <section class="section section-accent" id="international">
-    <div class="section-inner reverse">
-      <div class="section-mascot">
-        <div class="mascot-circle globe-icon">🌍</div>
-      </div>
-      <div class="section-text">
-        <h2 class="section-heading">International Access</h2>
-        <p>
-          Students can search for tutors and possibly find one that is based in another country.
-          However, there are no worries because our platform will have automatic translations for
-          both the tutor and students so they can communicate effectively.
-        </p>
-        <a href="#get-started" class="btn-primary">Find Global Tutors</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== GET STARTED ===== -->
-  <section class="cta-section" id="get-started">
+  <!-- SIGNUP CTA -->
+  <section class="cta-section" id="signup">
+    <div class="cta-glow"></div>
     <div class="cta-inner">
-      <h2>Ready to Get Started?</h2>
-      <p>Join T.O.D today — learn anything, teach anything, anytime.</p>
-      <div class="cta-buttons">
-        <a href="#" class="btn-primary">Sign Up Free</a>
-        <a href="#idea" class="btn-outline">Learn More</a>
+      <div class="cta-mascot">
+        <svg viewBox="0 0 120 120" fill="none" width="120" height="120">
+          <circle cx="60" cy="60" r="58" fill="#071c1b" stroke="#00e5c8" stroke-width="2"/>
+          <polygon points="60,16 84,28 60,36 36,28" fill="#00e5c8"/>
+          <rect x="55" y="28" width="10" height="8" fill="#009e8c"/>
+          <line x1="84" y1="28" x2="89" y2="40" stroke="#ffe066" stroke-width="2"/>
+          <circle cx="89" cy="42" r="3" fill="#ffe066"/>
+          <ellipse cx="60" cy="71" rx="19" ry="17" fill="#00e5c8"/>
+          <ellipse cx="40" cy="61" rx="9" ry="14" fill="#009e8c" transform="rotate(-10 40 61)"/>
+          <ellipse cx="80" cy="61" rx="9" ry="14" fill="#009e8c" transform="rotate(10 80 61)"/>
+          <circle cx="53" cy="67" r="5" fill="#fff"/>
+          <circle cx="67" cy="67" r="5" fill="#fff"/>
+          <circle cx="54" cy="68" r="3" fill="#071c1b"/>
+          <circle cx="68" cy="68" r="3" fill="#071c1b"/>
+          <circle cx="54.5" cy="67" r="1.2" fill="#fff" opacity="0.7"/>
+          <circle cx="68.5" cy="67" r="1.2" fill="#fff" opacity="0.7"/>
+          <ellipse cx="60" cy="78" rx="4" ry="3" fill="#071c1b"/>
+          <path d="M54 84 Q60 90 66 84" stroke="#071c1b" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <ellipse cx="60" cy="100" rx="16" ry="12" fill="#00e5c8"/>
+          <path d="M78 95 Q94 74 82 52" stroke="#00e5c8" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+          <polygon points="81,49 87,59 76,57" fill="#00e5c8" opacity="0.5"/>
+        </svg>
+      </div>
+      <h2>Start Learning Today</h2>
+      <p>Join thousands already learning and teaching on T.O.D.</p>
+      <div class="cta-btns">
+        <a href="#" class="btn-solid">Sign Up — It's Free</a>
+        <a href="#idea" class="btn-ghost">Learn More</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-inner">
+    <div class="footer-top">
       <div class="footer-brand">
-        <span class="nav-title">T.O.D</span>
-        <p>Tutoring On Demand — Live, Personalized, Anytime</p>
+        <a href="#" class="logo">
+          <svg class="logo-svg" viewBox="0 0 44 44" fill="none">
+            <circle cx="22" cy="22" r="21" fill="#00e5c8" stroke="#00e5c8" stroke-width="1.5"/>
+            <polygon points="22,7 34,13 22,17 10,13" fill="#001a18"/>
+            <rect x="19" y="13" width="6" height="4" fill="#001a18"/>
+            <ellipse cx="22" cy="27" rx="9" ry="8" fill="#001a18"/>
+            <ellipse cx="14" cy="23" rx="4" ry="6" fill="#001a18" transform="rotate(-8 14 23)"/>
+            <ellipse cx="30" cy="23" rx="4" ry="6" fill="#001a18" transform="rotate(8 30 23)"/>
+          </svg>
+          <span>T.O.D</span>
+        </a>
+        <p>Tutoring On Demand<br/>Live · Personalized · Anytime</p>
       </div>
-      <div class="footer-links">
-        <a href="#idea">The Idea</a>
-        <a href="#tutors">Tutors</a>
-        <a href="#kids">Kids</a>
-        <a href="#international">International</a>
-      </div>
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <strong>Platform</strong>
+          <a href="#idea">The Idea</a>
+          <a href="#how">How It Works</a>
+          <a href="#signup">Sign Up</a>
+        </div>
+        <div class="footer-col">
+          <strong>Users</strong>
+          <a href="#tutors">Become a Tutor</a>
+          <a href="#kids">Kids Section</a>
+          <a href="#international">International</a>
+        </div>
+      </nav>
     </div>
-    <p class="footer-copy">&copy; 2026 T.O.D — Tutoring On Demand. All rights reserved.</p>
+    <div class="footer-bottom">
+      <span>&copy; 2026 T.O.D — Tutoring On Demand. All rights reserved.</span>
+    </div>
   </footer>
 
   <script src="script.js"></script>
